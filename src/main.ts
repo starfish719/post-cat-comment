@@ -1,3 +1,4 @@
+/* eslint-disable no-irregular-whitespace */
 import * as github from '@actions/github'
 import * as core from '@actions/core'
 
@@ -11,7 +12,7 @@ async function run(): Promise<void> {
     const octokit = new github.GitHub(myToken)
 
     const body = `
-  ∧,,∧
+　∧,,∧
 （=・ω・）
 （,, ｕｕﾉ`
     octokit.issues.createComment({owner, repo, number, body})
