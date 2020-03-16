@@ -27,7 +27,9 @@ Maybe, `{{ github.event.issues.id }}` .
 ## Outputs
 
 　∧,,∧
+
 （=・ω・）
+
 （,, ｕｕﾉ
 
 ## Example usage
