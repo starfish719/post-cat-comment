@@ -2028,7 +2028,8 @@ function run() {
             const repo = core.getInput('repo');
             const myToken = core.getInput('myToken');
             const octokit = new github.GitHub(myToken);
-            const body = `∧,,∧
+            const body = `
+  ∧,,∧
 （=・ω・）
 （,, ｕｕﾉ`;
             octokit.issues.createComment({ owner, repo, number, body });
