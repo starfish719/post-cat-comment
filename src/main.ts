@@ -1,16 +1,19 @@
+import * as github from '@actions/github'
 import * as core from '@actions/core'
-import {wait} from './wait'
 
 async function run(): Promise<void> {
   try {
-    const ms: string = core.getInput('milliseconds')
-    core.debug(`Waiting ${ms} milliseconds ...`)
+    const number = Number(core.getInput('issue_number'))
+    const owner: string = core.getInput('owner')
+    const repo: string = core.getInput('repo')
+    const myToken: string = core.getInput('myToken')
 
-    core.debug(new Date().toTimeString())
-    await wait(parseInt(ms, 10))
-    core.debug(new Date().toTimeString())
+    const octokit = new github.GitHub(myToken)
 
-    core.setOutput('time', new Date().toTimeString())
+    const body = `∧,,∧
+    （=・ω・）
+    （,, ｕｕﾉ`
+    octokit.issues.createComment({owner, repo, number, body})
   } catch (error) {
     core.setFailed(error.message)
   }
