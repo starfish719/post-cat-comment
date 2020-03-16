@@ -12,8 +12,8 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - run: |
-      npm ci
-      npm run all
+        npm ci
+        npm run all
     - uses: ./
       with: 
         owner: starfish719
