@@ -9,10 +9,10 @@ inputs:
     description: 'input repo name here'
     default: 'default value if applicable'
   issueNumber:
-    description: 'input ${{ github.event.issues.id }} here'
+    description: 'input github.event.issues.id here'
     default: 'default value if applicable'
   myToken:
-    description: 'input ${{ secrets.GITHUB_TOKEN }} here'
+    description: 'input secrets.GITHUB_TOKEN here'
     default: 'default value if applicable'
 runs:
   using: 'node12'
