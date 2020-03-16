@@ -11,8 +11,8 @@ async function run(): Promise<void> {
     const octokit = new github.GitHub(myToken)
 
     const body = `∧,,∧
-    （=・ω・）
-    （,, ｕｕﾉ`
+（=・ω・）
+（,, ｕｕﾉ`
     octokit.issues.createComment({owner, repo, number, body})
   } catch (error) {
     core.setFailed(error.message)
