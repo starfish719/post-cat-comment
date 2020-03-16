@@ -2,8 +2,17 @@ name: 'Your name here'
 description: 'Provide a description here'
 author: 'Your name or organization here'
 inputs:
-  myInput:              # change this
-    description: 'input description here'
+  owner:
+    description: 'input owner here'
+    default: 'default value if applicable'
+  repo:
+    description: 'input repo name here'
+    default: 'default value if applicable'
+  issueNumber:
+    description: 'input ${{ github.event.issues.id }} here'
+    default: 'default value if applicable'
+  myToken:
+    description: 'input ${{ secrets.GITHUB_TOKEN }} here'
     default: 'default value if applicable'
 runs:
   using: 'node12'

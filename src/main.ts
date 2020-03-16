@@ -3,7 +3,7 @@ import * as core from '@actions/core'
 
 async function run(): Promise<void> {
   try {
-    const number = Number(core.getInput('issue_number'))
+    const number = Number(core.getInput('issueNumber'))
     const owner: string = core.getInput('owner')
     const repo: string = core.getInput('repo')
     const myToken: string = core.getInput('myToken')
